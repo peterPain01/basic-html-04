@@ -1,0 +1,161 @@
+html {
+    font-size: 62.5%;
+    box-sizing:content-box;
+}
+:root {
+    --main-color: "#FFFAF5";
+    --active-color: #000958;
+    --button-color: #FD5056;
+    --text-color: #656689;
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: Poppins;
+}
+
+button,
+p {
+    font-family: inherit;
+}
+.container {
+    width: 1170px;
+    max-width: calc(100% - 48px);
+    margin: 0 auto;
+    background-color: var(--main-color);
+}
+
+.header {
+    margin-top: 32px;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+}
+
+.navbar__list {
+    display: flex;
+    flex-direction: row;
+    margin-left: 229px;
+    gap: 36px;
+}
+
+.navbar__list--item {
+    color: #5e6085;
+    font-weight: 600;
+    font-size: 1.4rem;
+    line-height: 1.2;
+}
+
+.navbar__list--item:hover {
+    cursor: pointer;
+    color: var(--active-color);
+}
+.navbar__list--active {
+    color: var(--active-color);
+}
+
+.navbar__button {
+    color: var(--active-color);
+    padding: 16px 31px;
+    text-align: center;
+    border-radius: 32px;
+    font-weight: 600;
+    margin-left: auto;
+    background-color: transparent;
+    cursor: pointer;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+.navbar__button:hover {
+    background-color: var(--active-color);
+    color: #fff;
+}
+
+/* Hero */
+.hero {
+    margin-top: 100px;
+    display: flex;
+}
+
+.hero__card {
+    position: relative;
+    width: 50%;
+}
+
+.hero__desc {
+    width: 50%;
+    padding-left: 100px;
+    padding-top: 71px;
+}
+
+.hero__card--main {
+    position: absolute;
+    width: 390px;
+    height: 490px;
+    left: 0px;
+    bottom: 0px;
+    object-fit: cover;
+}
+
+.hero__card--sub {
+    position: absolute;
+    width: 186px;
+    height: 244px;
+    bottom: -60px;
+    right: 40px;
+    object-fit: cover;
+}
+
+.hero__card--detail{ 
+    position: absolute;
+    bottom: -62px;
+    right: 160px;
+}
+
+
+.hero__desc--heading {
+    color: var(--active-color);
+    font-size: 6.6rem;
+    font-weight: 800;
+    font-family: "Sora";
+}
+
+.hero__desc--text {
+    color: var(--text-color);
+    font-size: 1.6rem;
+    line-height: 1.5;
+    margin-top: 34px;
+}
+.hero__card--decorate{ 
+    position: absolute;
+    bottom: 40px;
+    left: 0;
+    z-index: -1;
+}
+
+.hero__card--subdecorate{ 
+    position: absolute;
+    top: 0;
+    right: 150px;
+}
+.desc__aciton {
+    margin-top: 38px;
+}
+
+.desc_action--book{ 
+    color: #fff;
+    background-color: var(--button-color);
+    border-radius: 31px;
+    border: none;
+    cursor: pointer;
+    padding: 22px 30px; 
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+.desc_action--schedule{ 
+    color: var(--active-color);
+    font-size: 1.6rem;
+    margin-left: 24px;
+}
