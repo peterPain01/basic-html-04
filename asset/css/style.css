@@ -14,10 +14,24 @@ body {
     font-family: Poppins;
     background-color: var(--main-color);
 }
+img {
+    padding: 0;
+    margin: 0;
+    stroke: transparent;
+    stroke-width: 0px;
+}
+
+svg {
+}
 
 button,
 p {
     font-family: inherit;
+}
+h1,
+h2,
+h3 {
+    font-family: "Sora";
 }
 .container {
     width: 1170px;
@@ -118,7 +132,6 @@ p {
     color: var(--active-color);
     font-size: 6.6rem;
     font-weight: 800;
-    font-family: "Sora";
 }
 
 .hero__desc--text {
@@ -172,10 +185,10 @@ p {
     display: flex;
 }
 
-.about__desc{ 
+.about__desc {
     width: 50%;
 }
-.about__card{ 
+.about__card {
     position: relative;
     width: 50%;
     margin-left: 108px;
@@ -189,21 +202,20 @@ p {
 
 .about__heading {
     color: var(--active-color);
-    font-family: Sora;
     font-size: 5.2rem;
     font-weight: 700;
     line-height: 1.8;
     text-align: left;
 }
 
-.about__description{ 
+.about__description {
     margin-top: 24px;
     color: var(--text-color);
     font-size: 1.6rem;
     line-height: 3;
 }
 
-.about__criteria{ 
+.about__criteria {
     display: grid;
     margin-top: 54px;
     grid-template-columns: auto auto;
@@ -214,20 +226,121 @@ p {
     font-weight: 500;
 }
 
-
-.about__criteria--checkbox{ 
+.about__criteria--checkbox {
     margin-right: 10px;
     vertical-align: middle;
 }
 
-.about_card--main{ 
+.about_card--main {
     width: 630px;
     max-width: 630px;
     object-fit: cover;
 }
 
-.about__card--sub{ 
+.about__card--sub {
     position: absolute;
     top: 120px;
     left: -100px;
+}
+
+.boarding {
+    margin-top: 77px;
+    display: flex;
+}
+.boarding__card {
+    width: 50%;
+}
+.boarding__card--main {
+    border-radius: 6px;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.boarding__desc {
+    width: 50%;
+    margin-left: 108px;
+}
+
+.boarding__desc--heading {
+    color: var(--active-color);
+    font-size: 5.2rem;
+    line-height: 1.8;
+    font-weight: 700;
+}
+
+.boarding__desc--desc {
+    margin-top: 24px;
+    line-height: 2.3;
+    color: var(--text-color);
+}
+
+.desc__options--title {
+    position: relative;
+    margin-top: 52px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.options__title--item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+}
+.options__title--item h3 {
+    cursor: pointer;
+    color: #48496a;
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+.options__title--item img {
+    display: inline-block;
+    width: 28px;
+    max-width: 28px;
+    min-width: 28px;
+    object-fit: cover;
+    vertical-align: bottom;
+}
+.options__desc {
+    margin-top: 36px;
+    color: var(--text-color);
+    font: 1.4rem;
+    line-height: 2;
+}
+
+.options__action {
+    display: inline-block;
+    color: var(--button-color);
+    text-decoration: underline;
+    margin-top: 53px;
+}
+
+.options__progress {
+    position: absolute;
+    content: "";
+    top: 34px;
+    left: 0;
+    right: auto;
+    background: #fcf0e8;
+    height: 2px;
+    width: 100%;
+    border: none;
+}
+
+.options__progress::-moz-progress-bar {
+    background: #fcf0e8;
+}
+
+.options__progress::-webkit-progress-value {
+    -webkit-transition: width 0.4s ease;
+    -moz-transition: width 0.4s ease;
+    -o-transition: width 0.4s ease;
+    transition: width 0.4s ease;
+    background: var(--button-color);
+}
+
+.options__progress::-webkit-progress-bar {
+    background: #fcf0e8;
 }
