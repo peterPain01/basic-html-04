@@ -1,17 +1,18 @@
 html {
     font-size: 62.5%;
-    box-sizing:content-box;
+    box-sizing: content-box;
 }
 :root {
     --main-color: "#FFFAF5";
     --active-color: #000958;
-    --button-color: #FD5056;
+    --button-color: #ff5b2e;
     --text-color: #656689;
 }
 
 body {
     font-size: 1.6rem;
     font-family: Poppins;
+    background-color: var(--main-color);
 }
 
 button,
@@ -22,7 +23,6 @@ p {
     width: 1170px;
     max-width: calc(100% - 48px);
     margin: 0 auto;
-    background-color: var(--main-color);
 }
 
 .header {
@@ -108,12 +108,11 @@ p {
     object-fit: cover;
 }
 
-.hero__card--detail{ 
+.hero__card--detail {
     position: absolute;
     bottom: -62px;
     right: 160px;
 }
-
 
 .hero__desc--heading {
     color: var(--active-color);
@@ -128,14 +127,14 @@ p {
     line-height: 1.5;
     margin-top: 34px;
 }
-.hero__card--decorate{ 
+.hero__card--decorate {
     position: absolute;
     bottom: 40px;
     left: 0;
     z-index: -1;
 }
 
-.hero__card--subdecorate{ 
+.hero__card--subdecorate {
     position: absolute;
     top: 0;
     right: 150px;
@@ -144,18 +143,91 @@ p {
     margin-top: 38px;
 }
 
-.desc_action--book{ 
+.desc_action--book {
     color: #fff;
     background-color: var(--button-color);
     border-radius: 31px;
     border: none;
     cursor: pointer;
-    padding: 22px 30px; 
+    padding: 20px 24px;
     font-size: 1.6rem;
     font-weight: 600;
 }
-.desc_action--schedule{ 
+
+.book__icon {
+    width: calc(20px + 1vw);
+    vertical-align: middle;
+    object-fit: cover;
+    margin-left: 6px;
+}
+.desc_action--schedule {
     color: var(--active-color);
     font-size: 1.6rem;
     margin-left: 24px;
+}
+
+.about {
+    margin-top: 77px;
+    padding-top: 130px;
+    display: flex;
+}
+
+.about__desc{ 
+    width: 50%;
+}
+.about__card{ 
+    position: relative;
+    width: 50%;
+    margin-left: 108px;
+}
+
+.about__hashtag {
+    color: #5e6085;
+    font-family: "Sora";
+    font-size: 1.6rem;
+}
+
+.about__heading {
+    color: var(--active-color);
+    font-family: Sora;
+    font-size: 5.2rem;
+    font-weight: 700;
+    line-height: 1.8;
+    text-align: left;
+}
+
+.about__description{ 
+    margin-top: 24px;
+    color: var(--text-color);
+    font-size: 1.6rem;
+    line-height: 3;
+}
+
+.about__criteria{ 
+    display: grid;
+    margin-top: 54px;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    column-gap: 36px;
+    row-gap: 34px;
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+
+.about__criteria--checkbox{ 
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.about_card--main{ 
+    width: 630px;
+    max-width: 630px;
+    object-fit: cover;
+}
+
+.about__card--sub{ 
+    position: absolute;
+    top: 120px;
+    left: -100px;
 }
