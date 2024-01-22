@@ -3,8 +3,8 @@ html {
 }
 :root {
     box-sizing: border-box;
-    --main-color: #FFFAF5;
-    --sub-color: #FFF6ED; 
+    --main-color: #fffaf5;
+    --sub-color: #fff6ed;
     --active-color: #000958;
     --button-color: #ff5b2e;
     --text-color: #656689;
@@ -53,7 +53,7 @@ h3 {
     color: #fff;
 }
 
-.heading--center{ 
+.heading--center {
     font-family: Sora;
     font-size: 5.2rem;
     font-weight: 700;
@@ -527,7 +527,7 @@ h3 {
 .info__item {
     scale: 1;
     cursor: pointer;
-   
+
     transition: scale 0.3s;
 }
 
@@ -563,22 +563,154 @@ h3 {
     justify-content: center;
 }
 
-
 /* Choice */
-.choice{ 
+.choice {
     margin-top: 130px;
     padding-top: 86px;
     background-color: var(--sub-color);
 }
 
-.choice__header{ 
+.choice__header {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-.choice__desc{ 
+.choice__desc {
     text-align: center;
     max-width: 700px;
     font-size: 1.6rem;
     line-height: 2;
+}
+
+.choice__action {
+    margin-top: 38px;
+    position: relative;
+}
+
+.toggle {
+    position: relative;
+    display: inline-block;
+    width: 276px;
+    height: 56px;
+    background-color: transparent;
+    border-radius: 31px;
+    border: 1px solid var(--button-color);
+}
+
+/* After slide changes */
+.toggle:after {
+    content: "";
+    position: absolute;
+    width: 130px;
+    height: 100%;
+    border-radius: 31px;
+    background-color: var(--button-color);
+    top: 0px;
+    left: 0;
+    transition: all 0.5s;
+}
+
+.switch--month,
+.switch--year {
+    position: absolute;
+    user-select: none;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+.switch--month {
+    left: 34px;
+    color: #fff;
+}
+.switch--year {
+    right: 40px;
+    color: var(--button-color);
+}
+.checkbox:checked + .toggle::after {
+    left: 100%;
+    transform: translateX(-100%);
+}
+.checkbox:checked + .toggle .switch--year {
+    color: #fff;
+}
+
+.checkbox:checked + .toggle .switch--month {
+    color: var(--button-color);
+}
+
+.checkbox:checked + .toggle {
+    /* background-color: var(--button-color); */
+}
+
+/* Checkbox vanished */
+.checkbox {
+    display: none;
+}
+
+.switch--sale {
+    position: absolute;
+    top: 0;
+    right: -100px;
+}
+.choice__packages {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 0 98px;
+    margin-top: 56px;
+    box-sizing: border-box;
+    gap: 44px;
+}
+
+.packages__item {
+    width: 300px;
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 30px;
+}
+.packages__item--level {
+    color: var(--button-color);
+    font-size: 1.2rem;
+}
+.packages__item--name {
+    color: var(--active-color);
+    line-height: 2;
+    font-weight: 600;
+    font-size: 1.8rem;
+    font-family: "Sora";
+}
+
+.packages__item--price {
+    color: var(--active-color);
+    font-size: 3.3rem;
+    line-height: 2;
+    font-weight: 700;
+    font-family: "Sora";
+}
+
+.packages__item--list {
+    margin-top: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    color: var(--text-color);
+    font-size: 1.4rem;
+}
+
+.packages__item--list img {
+    vertical-align: middle;
+    margin-right: 12px;
+    filter: brightness(0) saturate(100%) invert(59%) sepia(72%) saturate(4553%)
+        hue-rotate(339deg) brightness(98%) contrast(106%) opacity(0.4);
+}
+
+.packages__item--active img {
+    filter: brightness(0) saturate(100%) invert(59%) sepia(72%) saturate(4553%)
+        hue-rotate(339deg) brightness(98%) contrast(106%);
+}
+.packages__item--purchase {
+    width: 100%;
+    margin-top: 12px;
+    padding: 14px 0px;
+    min-width: 100%;
 }
