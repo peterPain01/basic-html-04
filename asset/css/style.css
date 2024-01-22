@@ -743,7 +743,7 @@ h3 {
     font-weight: 600;
     margin-top: 34px;
 }
-.review--name::before{ 
+.review--name::before {
     content: "";
     margin-right: 6px;
     width: 10px;
@@ -754,27 +754,28 @@ h3 {
     background-color: black;
 }
 
-.reviews__slider--forward, .reviews__slider--back {
+.reviews__slider--forward,
+.reviews__slider--back {
     position: absolute;
-    top: 56%; 
+    top: 56%;
 }
-.reviews__slider--forward{ 
+.reviews__slider--forward {
     right: 0;
 }
-.reviews__slider--back{ 
+.reviews__slider--back {
     left: 0;
 }
 
-.reviews__slider--status{ 
+.reviews__slider--status {
     position: absolute;
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
 }
 
-.reviews__slider--status ul{
+.reviews__slider--status ul {
     display: flex;
-    gap: 4px; 
+    gap: 4px;
 }
 .slider__button {
     border-radius: 50%;
@@ -798,24 +799,187 @@ h3 {
         hue-rotate(250deg) brightness(101%) contrast(105%);
 }
 
-.slider__button--forward{ 
+.slider__button--forward {
     rotate: 180deg;
 }
 
-.slider__status--main{ 
+.slider__status--main {
     width: 20px;
     height: 8px;
     border-radius: 31px;
     border: 1px solid var(--button-color);
 }
 
-.slider__status--point{ 
+.slider__status--point {
     width: 8px;
     height: 8px;
     border-radius: 50%;
     border: 1px solid var(--button-color);
 }
 
-.slider__status--active{ 
+.slider__status--active {
     background-color: var(--button-color);
+}
+
+.blogs {
+    margin-top: 130px;
+}
+.blog__header {
+    display: flex;
+    justify-content: space-between;
+}
+.blog__header--heading {
+    text-align: left;
+}
+
+.blogs__action--desciption {
+    max-width: 360px;
+    color: #656689;
+    line-height: 2;
+}
+.blogs__action---button {
+    padding: 20px 40px;
+    margin-top: 20px;
+}
+
+.blogs__cards {
+    margin-top: 54px;
+    display: flex;
+    gap: 20px;
+}
+
+.blogs__card--heading {
+    color: var(--active-color);
+    font-weight: 600;
+    font-family: "Sora";
+    font-size: 2.2rem;
+    line-height: 1.6;
+}
+
+.blogs__card--description {
+    color: rgba(101, 102, 137, 1);
+    margin-top: 12px;
+    line-height: 1.8;
+}
+
+.footer {
+    display: grid;
+    grid-template-columns: 500px auto auto;
+    margin-top: 130px;
+    background-color: var(--sub-color);
+}
+
+.footer__socials {
+    padding: 52px 0px;
+    display: flex;
+    grid-column: 1/2;
+    flex-direction: column;
+}
+.footer__socials--logo {
+    width: 100px;
+    max-width: 100px;
+    object-fit: cover;
+}
+
+.footer__socials--form {
+    position: relative;
+    margin-top: 34px;
+    height: 92px;
+    display: flex;
+    align-items: center;
+}
+
+.footer__socials--input {
+    border: 1px solid rgba(255, 91, 46, 0.25);
+    border-radius: 31px;
+    min-width: 54%;
+    height: 50%;
+    padding-left: 20px;
+    padding-right: 46px;
+    box-sizing: border-box;
+}
+.footer__right {
+    padding: 52px 0px;
+    grid-column: 2/4;
+    background-color: #fff;
+}
+
+.footer__socials--sendBtn {
+    width: 46px;
+    height: 50%;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    right: 42%;
+    border: none;
+    background-color: transparent;
+    transform: translate(-46%, -50%);
+    cursor: pointer;
+}
+
+.footer__socials--sendBtn:hover {
+    background-color: var(--button-color);
+}
+.footer__socials--sendBtn img {
+    rotate: 180deg;
+}
+.footer__socials--sendBtn:hover img {
+    filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%)
+        hue-rotate(5deg) brightness(99%) contrast(102%);
+    vertical-align: middle;
+    rotate: 180deg;
+}
+.footer__socials--title {
+    color: var(--active-color);
+    margin-top: 68px;
+    font-weight: 600;
+    font-size: 1.8rem;
+    font-family: "Sora";
+}
+
+.footer__right{ 
+    background-color: #fff;
+}
+.footer__socials--links{ 
+    display: flex;
+    margin-top: 20px;
+    gap: 12px;
+}
+.footer__socials--links li{ 
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.footer__links{ 
+    padding-left: 129px;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    row-gap: 46px;
+    column-gap: 80px;
+}
+
+.links__block p{ 
+    padding: 6px 0px;
+}
+.links__block--title{ 
+    color: var(--active-color);
+    font-size: 1.8rem;
+    font-family: 'Sora';
+    font-weight: 600;
+    line-height: 2;
+}
+
+
+.footer__copyright{ 
+    margin-top: 20px;
+    padding-left: 22px;
+    color: var(--text-color);
 }
