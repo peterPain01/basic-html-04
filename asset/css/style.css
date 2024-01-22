@@ -3,7 +3,8 @@ html {
 }
 :root {
     box-sizing: border-box;
-    --main-color: "#FFFAF5";
+    --main-color: #FFFAF5;
+    --sub-color: #FFF6ED; 
     --active-color: #000958;
     --button-color: #ff5b2e;
     --text-color: #656689;
@@ -21,13 +22,6 @@ img {
     stroke-width: 0px;
 }
 
-button{ 
-    transition: color 0.3s, background-color 0.3s;
-
-}
-svg {
-}
-
 button,
 p {
     font-family: inherit;
@@ -36,7 +30,37 @@ h1,
 h2,
 h3 {
     font-family: "Sora";
+    color: var(--active-color);
 }
+
+/* Common */
+.button {
+    color: var(--button-color);
+    border-radius: 31px;
+    border: 1px solid var(--button-color);
+    background-color: transparent;
+    padding: 20px 40px;
+    font-weight: 500;
+    font-size: 1.6rem;
+    align-items: center;
+    cursor: pointer;
+    max-width: 240px;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+.button:hover {
+    background-color: var(--button-color);
+    color: #fff;
+}
+
+.heading--center{ 
+    font-family: Sora;
+    font-size: 5.2rem;
+    font-weight: 700;
+    line-height: 2;
+    text-align: center;
+}
+/* End common CSS */
 .container {
     width: 1170px;
     max-width: calc(100% - 48px);
@@ -160,16 +184,15 @@ h3 {
 }
 
 .desc_action--book {
-    color: #fff;
-    background-color: var(--button-color);
-    border-radius: 31px;
-    border: none;
     cursor: pointer;
     padding: 20px 24px;
     font-size: 1.6rem;
     font-weight: 600;
 }
 
+.desc_action--book:hover {
+    box-shadow: 0px 13px 26px -8px #ff5b2e6b;
+}
 .book__icon {
     width: calc(20px + 1vw);
     vertical-align: middle;
@@ -180,6 +203,7 @@ h3 {
     color: var(--active-color);
     font-size: 1.6rem;
     margin-left: 24px;
+    font-weight: 500;
 }
 
 .about {
@@ -204,7 +228,6 @@ h3 {
 }
 
 .about__heading {
-    color: var(--active-color);
     font-size: 5.2rem;
     font-weight: 700;
     line-height: 1.8;
@@ -295,7 +318,7 @@ h3 {
 .options__title--item h3 {
     cursor: pointer;
     color: #48496a;
-    font-size: 1.8rem;
+    font-size: calc(1.6rem + 0.1vw);
     font-weight: 600;
 }
 .options__title--item img {
@@ -311,6 +334,9 @@ h3 {
     color: var(--text-color);
     font: 1.4rem;
     line-height: 2;
+    max-width: 100%;
+    max-height: 80px;
+    min-height: 80px;
 }
 
 .options__action {
@@ -365,15 +391,9 @@ h3 {
     font-family: "Sora";
     text-align: center;
 }
-.services_heading {
-    color: var(--active-color);
-    font-size: 5.2rem;
-    font-weight: 700;
-    text-align: center;
-    margin-top: 15px;
-}
+
 .services__content {
-    margin-top:88px;
+    margin-top: 88px;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -393,15 +413,15 @@ h3 {
     align-items: center;
 }
 
-.content__item:nth-child(2){ 
+.content__item:nth-child(2) {
     position: relative;
     padding: 0 71px;
     display: flex;
     flex-direction: column;
-    gap: 45px; 
+    gap: 45px;
     width: 40%;
 }
-.content__item .item{ 
+.content__item .item {
     background-color: #fff;
     display: flex;
     flex-direction: column;
@@ -411,41 +431,41 @@ h3 {
     border-radius: 10px;
     padding: 30px 22px;
     gap: 18px;
-    box-sizing: border-box
+    box-sizing: border-box;
 }
 
-.content__item .item:first-child{ 
+.content__item .item:first-child {
     margin-top: 0;
 }
 
-.content__item .item .item__name{ 
+.content__item .item .item__name {
     position: relative;
     color: #000958;
     font-size: 2.1rem;
     font-weight: 600;
-    font-family: 'Sora';
+    font-family: "Sora";
     padding-left: 12px;
 }
 
-.content__item .item .item__name::before{ 
+.content__item .item .item__name::before {
     position: absolute;
-    display: inline-block; 
-    background: linear-gradient(89.89deg, #FF5B2E 0.39%, #FFA187 100.29%);
+    display: inline-block;
+    background: linear-gradient(89.89deg, #ff5b2e 0.39%, #ffa187 100.29%);
     width: 2px;
-    height: 100%; 
+    height: 100%;
     content: "";
     top: 0;
     left: 0;
 }
 
-.content__item .item .item__action{ 
+.content__item .item .item__action {
     color: rgba(52, 57, 106, 1);
     font-size: 1.2rem;
     line-height: 1.3;
     text-decoration: none;
 }
 
-.content__item .item .item__action img{ 
+.content__item .item .item__action img {
     margin-left: 4px;
     vertical-align: middle;
     width: 12px;
@@ -454,23 +474,23 @@ h3 {
     transition: scale 0.3s;
 }
 
-.content__item .item .item__action img:hover{ 
+.content__item .item .item__action img:hover {
     scale: 1.2;
 }
-.content__item .item .item__desc{ 
-    color:rgba(101, 102, 137, 1);
+.content__item .item .item__desc {
+    color: rgba(101, 102, 137, 1);
     font-size: 1.4rem;
     line-height: 2;
 }
-.content__image{ 
+.content__image {
     width: 100%;
     max-width: 100%;
     object-fit: cover;
     z-index: 2;
 }
 
-.content__image--background{
-    position: absolute; 
+.content__image--background {
+    position: absolute;
     bottom: 126px;
     left: 50%;
     transform: translateX(-50%);
@@ -478,22 +498,87 @@ h3 {
     height: 350px;
     display: inline-block;
     z-index: 1;
-    background: linear-gradient(180deg, #9DF1FB 0%, #73D0DB 108.14%);
+    background: linear-gradient(180deg, #9df1fb 0%, #73d0db 108.14%);
 }
-.content__action--more{ 
-    color: var(--button-color);
-    padding: 20px 40px;
-    border-radius: 31px;
-    border: 1px solid var(--button-color);
-    background-color: transparent;
-    cursor: pointer;
-    font-weight: 500;
-    font-size: 1.6rem;
-    align-items: center;
-    max-width: 240px;
+.content__action--more {
 }
 
-.content__action--more:hover{ 
-    background-color: var(--button-color);
-    color: #fff; 
+/* Team */
+
+.team {
+    margin-top: 130px;
+}
+
+.team__header--tag {
+    color: #5e6085;
+    font-weight: 600;
+    font-size: 1.6rem;
+    font-family: "Sora";
+    text-align: center;
+}
+
+.team__info {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.info__item {
+    scale: 1;
+    cursor: pointer;
+   
+    transition: scale 0.3s;
+}
+
+.info__item:hover {
+    scale: 1.1;
+}
+
+.info__item--avatar {
+    width: 230px;
+    max-width: 230px;
+    min-width: 230px;
+    object-fit: cover;
+}
+
+.info__item--role {
+    margin-top: 34px;
+    text-align: center;
+    font-size: 1.4rem;
+    color: var(--text-color);
+}
+
+.info__item--name {
+    text-align: center;
+    font-family: Sora;
+    font-size: 2.2rem;
+    color: var(--active-color);
+    font-weight: 600;
+    line-height: 2;
+}
+.team-action {
+    margin-top: 48px;
+    display: flex;
+    justify-content: center;
+}
+
+
+/* Choice */
+.choice{ 
+    margin-top: 130px;
+    padding-top: 86px;
+    background-color: var(--sub-color);
+}
+
+.choice__header{ 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.choice__desc{ 
+    text-align: center;
+    max-width: 700px;
+    font-size: 1.6rem;
+    line-height: 2;
 }
