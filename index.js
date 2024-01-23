@@ -26,7 +26,53 @@ check_box.addEventListener("change", (e) => {
         });
     } else {
         packages_price.forEach((item, index) => {
-            item.textContent = "$" +monthly_prices[index];
+            item.textContent = "$" + monthly_prices[index];
         });
     }
 });
+
+const back_slider = document.querySelector(
+    ".reviews__slider--back .slider__button"
+);
+const forward_slider = document.querySelector(
+    ".reviews__slider--forward .slider__button"
+);
+
+const slides = document.querySelectorAll(".review__card");
+const wrapper = document.querySelector(".wrapper");
+const dots = document.querySelectorAll(".reviews__dots li div");
+let current_dots = 0;
+let new_left_index = wrapper.scrollLeft;
+
+back_slider.addEventListener("click", () => showSlide(1, current_dots - 1));
+forward_slider.addEventListener("click", () => showSlide(2, current_dots + 1));
+
+const maxScroll = wrapper.scrollWidth - wrapper.clientWidth;
+
+// 1 - back
+// 2 - forward
+function showSlide(mode, index) {
+    dots.forEach((dot) => {
+        dot.style.backgroundColor = "transparent";
+    });
+    index = index < 0 ? 0 : index;
+    index = index > 2 ? 2 : index;
+    if (mode == 1) {
+        if (wrapper.scrollLeft > 0) {
+            wrapper.scrollLeft -= slides[0].clientWidth;
+            dots[index].style.backgroundColor = "#ff5b2e";
+            current_dots= index;
+        } else {
+            dots[current_dots].style.backgroundColor = "#ff5b2e";
+        }
+    }
+    if (mode == 2) {
+        if (wrapper.scrollLeft < maxScroll) {
+            wrapper.scrollLeft += slides[0].clientWidth;
+            dots[index].style.backgroundColor = "#ff5b2e";
+            current_dots = index;
+        } else {
+            dots[current_dots].style.backgroundColor = "#ff5b2e";
+        }
+    }
+}
