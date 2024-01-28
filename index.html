@@ -8,6 +8,83 @@
         <!-- Embed Font -->
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <!-- Add Favicons -->
+        <link
+            rel="apple-touch-icon"
+            sizes="57x57"
+            href="./asset/favicon/apple-icon-57x57.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="60x60"
+            href="./asset/favicon/apple-icon-60x60.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="72x72"
+            href="./asset/favicon/apple-icon-72x72.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="76x76"
+            href="./asset/favicon/apple-icon-76x76.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="114x114"
+            href="./asset/favicon/apple-icon-114x114.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="120x120"
+            href="./asset/favicon/apple-icon-120x120.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="144x144"
+            href="./asset/favicon/apple-icon-144x144.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="152x152"
+            href="./asset/favicon/apple-icon-152x152.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="./asset/favicon/apple-icon-180x180.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="192x192"
+            href="./asset/favicon/android-icon-192x192.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="./asset/favicon/favicon-32x32.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="96x96"
+            href="./asset/favicon/favicon-96x96.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="./asset/favicon/favicon-16x16.png"
+        />
+        <link rel="manifest" href="./asset/favicon/manifest.json" />
+        <meta name="msapplication-TileColor" content="#ffffff" />
+        <meta
+            name="msapplication-TileImage"
+            content="./asset/favicon/ms-icon-144x144.png"
+        />
+        <meta name="theme-color" content="#ffffff" />
         <link
             href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Sora:wght@400;600;700;800&display=swap"
             rel="stylesheet"
@@ -19,7 +96,8 @@
     <body>
         <div class="container">
             <!-- Header -->
-            <div class="header">
+            <header class="header">
+                <!-- Navbar -->
                 <div class="navbar">
                     <img
                         class="navbar-logo"
@@ -27,20 +105,28 @@
                         alt=""
                     />
                     <ul class="navbar__list">
-                        <li class="navbar__list--item navbar__list--active">
-                            <a>Home</a>
+                        <li class="navbar__item navbar__item--active">
+                            <a class="navbar__link">Home</a>
                         </li>
-                        <li class="navbar__list--item"><a>About</a></li>
-                        <li class="navbar__list--item">
-                            <a>Services and Rates</a>
+                        <li class="navbar__item">
+                            <a class="navbar__link">About</a>
                         </li>
-                        <li class="navbar__list--item"><a>Review</a></li>
-                        <li class="navbar__list--item"><a>Contact us</a></li>
+                        <li class="navbar__item">
+                            <a class="navbar__link">Services and Rates</a>
+                        </li>
+                        <li class="navbar__item">
+                            <a class="navbar__link">Reviews</a>
+                        </li>
+                        <li class="navbar__item">
+                            <a class="navbar__link">Contact us</a>
+                        </li>
                     </ul>
-                    <button class="navbar__button">Sign up</button>
+                    <button class="navbar__action">Sign up</button>
                 </div>
+                <!-- Hero -->
                 <div class="hero">
-                    <div class="hero__card">
+                    <!-- Hero Media -->
+                    <div class="hero__media">
                         <img
                             class="hero__card--main"
                             src="./asset/img/card 03.svg"
@@ -67,17 +153,18 @@
                             alt=""
                         />
                     </div>
-                    <div class="hero__desc">
-                        <h1 class="hero__desc--heading">
+                    <!-- Hero Content -->
+                    <div class="hero__content">
+                        <h1 class="hero__heading">
                             Established & Trusted Pet Care Service
                         </h1>
-                        <p class="hero__desc--text">
+                        <p class="hero__desc">
                             Discover a wide variety of Pawsitive services to
                             choose from, including daycare, private walks,
                             office duty and spa.
                         </p>
-                        <div class="desc__aciton">
-                            <button class="desc_action--book button">
+                        <div class="hero__action">
+                            <button class="hero__action--book button">
                                 Book a meet
                                 <img
                                     class="book__icon"
@@ -85,16 +172,17 @@
                                     alt=""
                                 />
                             </button>
-                            <a href="" class="desc_action--schedule"
+                            <a href="#!" class="hero__action--schedule"
                                 >Schedule a Call</a
                             >
                         </div>
                     </div>
                 </div>
-            </div>
+            </header>
+            <!-- About -->
             <div class="about">
-                <!-- About -->
-                <div class="about__desc">
+                <!-- About Content -->
+                <div class="about__content">
                     <p class="about__hashtag">// About //</p>
                     <h1 class="about__heading">Best Agency For Your Pet</h1>
                     <p class="about__description">
@@ -133,7 +221,8 @@
                         </li>
                     </ul>
                 </div>
-                <div class="about__card">
+                <!-- About Media -->
+                <div class="about__media">
                     <img
                         class="about__card--main"
                         src="./asset/img/about.svg"
@@ -149,7 +238,7 @@
 
             <!-- Boarding -->
             <div class="boarding">
-                <div class="boarding__card">
+                <div class="boarding__media">
                     <img
                         class="boarding__card--main"
                         src="./asset/img/boarding.svg"
@@ -157,17 +246,17 @@
                     />
                 </div>
 
-                <div class="boarding__desc">
-                    <h1 class="boarding__desc--heading">
+                <div class="boarding__content">
+                    <h1 class="boarding__heading">
                         Taking A Vacation? So Is Your Pet.
                     </h1>
-                    <p class="boarding__desc--desc">
+                    <p class="boarding__desc">
                         We offer long-term and short-term boarding. Every dog
                         has its own private, spacious room and daily individual
                         time in our large play yard.
                     </p>
 
-                    <div class="boarding__desc--options">
+                    <div class="boarding__options">
                         <div class="desc__options--title">
                             <div class="options__title--item">
                                 <img
@@ -198,7 +287,7 @@
                             While you're on holiday, here's where your furry
                             friends will spend their time.
                         </p>
-                        <a href="" class="options__action">View more</a>
+                        <a href="#!" class="options__action">View more</a>
                     </div>
                 </div>
             </div>
@@ -210,42 +299,51 @@
                     <h1 class="heading--center">Our Services</h1>
                 </div>
                 <div class="services__content">
-                    <div class="content__item">
-                        <div class="item">
-                            <p class="item__name">Puppy Sitting</p>
-                            <p class="item__desc">
+                    <div class="services-columns">
+                        <div class="services-item">
+                            <p class="services-item__name">Puppy Sitting</p>
+                            <p class="services-item__desc">
                                 Helping your new pup to be a good boy or girl
                                 isn’t always easy, but we’re here to help.
                             </p>
-                            <a href="#!" class="item__action"
+                            <a href="#!" class="services-item__action"
                                 >Read more
-                                <img src="./asset/img/ArrowUpRight.svg" alt=""
+                                <img
+                                    src="./asset/img/ArrowUpRight.svg"
+                                    alt=""
+                                    class="services-item__icon"
                             /></a>
                         </div>
-                        <div class="item">
-                            <p class="item__name">Dog Walking</p>
-                            <p class="item__desc">
+                        <div class="services-item">
+                            <p class="services-item__name">Dog Walking</p>
+                            <p class="services-item__desc">
                                 Choose from a 30, 45, or 60-minute visit to give
                                 your pet their daily dose of fun-filled.
                             </p>
-                            <a href="#!" class="item__action"
-                                >Read more
-                                <img src="./asset/img/ArrowUpRight.svg" alt=""
+                            <a href="#!" class="services-item__action">
+                                Read more
+                                <img
+                                    src="./asset/img/ArrowUpRight.svg"
+                                    alt=""
+                                    class="services-item__icon"
                             /></a>
                         </div>
-                        <div class="item">
-                            <p class="item__name">Pet Sitting</p>
-                            <p class="item__desc">
+                        <div class="services-item">
+                            <p class="services-item__name">Pet Sitting</p>
+                            <p class="services-item__desc">
                                 While you’re away we can make sure your pet has
                                 all the food, water, exercise, and, of course.
                             </p>
-                            <a href="#!" class="item__action"
+                            <a href="#!" class="services-item__action"
                                 >Read more
-                                <img src="./asset/img/ArrowUpRight.svg" alt=""
+                                <img
+                                    src="./asset/img/ArrowUpRight.svg"
+                                    alt=""
+                                    class="services-item__icon"
                             /></a>
                         </div>
                     </div>
-                    <div class="content__item">
+                    <div class="services-columns">
                         <img
                             class="content__image"
                             src="./asset/img/services.png"
@@ -256,38 +354,47 @@
                             View All Services
                         </button>
                     </div>
-                    <div class="content__item">
-                        <div class="item">
-                            <p class="item__name">Overnight Care</p>
-                            <p class="item__desc">
+                    <div class="services-columns">
+                        <div class="services-item">
+                            <p class="services-item__name">Overnight Care</p>
+                            <p class="services-item__desc">
                                 While you’re away we can make sure your pet has
                                 all the food, water, exercise, and, of course.
                             </p>
-                            <a href="#!" class="item__action"
+                            <a href="#!" class="services-item__action"
                                 >Read more
-                                <img src="./asset/img/ArrowUpRight.svg" alt=""
+                                <img
+                                    src="./asset/img/ArrowUpRight.svg"
+                                    alt=""
+                                    class="services-item__icon"
                             /></a>
                         </div>
-                        <div class="item">
-                            <p class="item__name">Pet Taxi</p>
-                            <p class="item__desc">
+                        <div class="services-item">
+                            <p class="services-item__name">Pet Taxi</p>
+                            <p class="services-item__desc">
                                 Choose from a 30, 45, or 60-minute visit to give
                                 your pet their daily dose of fun-filled
                             </p>
-                            <a href="#!" class="item__action"
+                            <a href="#!" class="services-item__action"
                                 >Read more
-                                <img src="./asset/img/ArrowUpRight.svg" alt=""
+                                <img
+                                    src="./asset/img/ArrowUpRight.svg"
+                                    alt=""
+                                    class="services-item__icon"
                             /></a>
                         </div>
-                        <div class="item">
-                            <p class="item__name">Pet Medical Admin</p>
-                            <p class="item__desc">
+                        <div class="services-item">
+                            <p class="services-item__name">Pet Medical Admin</p>
+                            <p class="services-item__desc">
                                 Helping your new pup to be a good boy or girl
                                 isn’t always easy, but we’re here to help
                             </p>
-                            <a href="#!" class="item__action"
+                            <a href="#!" class="services-item__action"
                                 >Read more
-                                <img src="./asset/img/ArrowUpRight.svg" alt=""
+                                <img
+                                    src="./asset/img/ArrowUpRight.svg"
+                                    alt=""
+                                    class="services-item__icon"
                             /></a>
                         </div>
                     </div>
@@ -581,9 +688,7 @@
                 <div class="reviews__slider--status">
                     <ul class="reviews__dots">
                         <li>
-                            <div
-                                class="slider__status--main"
-                            ></div>
+                            <div class="slider__status--main"></div>
                         </li>
                         <li>
                             <div class="slider__status--point"></div>

@@ -83,22 +83,22 @@ h3 {
     gap: 36px;
 }
 
-.navbar__list--item {
+.navbar__item {
     color: #5e6085;
     font-weight: 600;
     font-size: 1.4rem;
     line-height: 1.2;
 }
 
-.navbar__list--item:hover {
+.navbar__item:hover {
     cursor: pointer;
     color: var(--active-color);
 }
-.navbar__list--active {
+.navbar__item--active {
     color: var(--active-color);
 }
 
-.navbar__button {
+.navbar__action {
     color: var(--active-color);
     padding: 16px 31px;
     text-align: center;
@@ -109,23 +109,26 @@ h3 {
     cursor: pointer;
 }
 
-.navbar__button:hover {
-    background-color: var(--active-color);
+.navbar__action:hover {
+    background-color: var(--active-color);  
     color: #fff;
 }
 
+.navbar__link{ 
+    padding: 8px 0px;
+}
 /* Hero */
 .hero {
     margin-top: 100px;
     display: flex;
 }
 
-.hero__card {
+.hero__media {
     position: relative;
     width: 50%;
 }
 
-.hero__desc {
+.hero__content {
     width: 50%;
     padding-left: 100px;
     padding-top: 71px;
@@ -155,13 +158,13 @@ h3 {
     right: 160px;
 }
 
-.hero__desc--heading {
+.hero__heading {
     color: var(--active-color);
     font-size: 6.6rem;
     font-weight: 800;
 }
 
-.hero__desc--text {
+.hero__desc {
     color: var(--text-color);
     font-size: 1.6rem;
     line-height: 1.5;
@@ -179,18 +182,18 @@ h3 {
     top: 0;
     right: 150px;
 }
-.desc__aciton {
+.hero__action {
     margin-top: 38px;
 }
 
-.desc_action--book {
+.hero__action--book {
     cursor: pointer;
     padding: 20px 24px;
     font-size: 1.6rem;
     font-weight: 600;
 }
 
-.desc_action--book:hover {
+.hero__action--book:hover {
     box-shadow: 0px 13px 26px -8px #ff5b2e6b;
 }
 .book__icon {
@@ -199,7 +202,7 @@ h3 {
     object-fit: cover;
     margin-left: 6px;
 }
-.desc_action--schedule {
+.hero__action--schedule {
     color: var(--active-color);
     font-size: 1.6rem;
     margin-left: 24px;
@@ -212,10 +215,10 @@ h3 {
     display: flex;
 }
 
-.about__desc {
+.about__content {
     width: 50%;
 }
-.about__card {
+.about__media {
     position: relative;
     width: 50%;
     margin-left: 108px;
@@ -273,7 +276,7 @@ h3 {
     margin-top: 77px;
     display: flex;
 }
-.boarding__card {
+.boarding__media {
     width: 50%;
 }
 .boarding__card--main {
@@ -284,19 +287,19 @@ h3 {
     object-fit: cover;
 }
 
-.boarding__desc {
+.boarding__content {
     width: 50%;
     margin-left: 108px;
 }
 
-.boarding__desc--heading {
+.boarding__heading {
     color: var(--active-color);
     font-size: 5.2rem;
     line-height: 1.8;
     font-weight: 700;
 }
 
-.boarding__desc--desc {
+.boarding__desc {
     margin-top: 24px;
     line-height: 2.3;
     color: var(--text-color);
@@ -405,7 +408,7 @@ h3 {
     clear: both;
 }
 
-.content__item {
+.services-columns {
     width: 30%;
     display: flex;
     flex-direction: column;
@@ -413,7 +416,7 @@ h3 {
     align-items: center;
 }
 
-.content__item:nth-child(2) {
+.services-columns:nth-child(2) {
     position: relative;
     padding: 0 71px;
     display: flex;
@@ -421,7 +424,7 @@ h3 {
     gap: 45px;
     width: 40%;
 }
-.content__item .item {
+.services-item{
     background-color: #fff;
     display: flex;
     flex-direction: column;
@@ -434,11 +437,11 @@ h3 {
     box-sizing: border-box;
 }
 
-.content__item .item:first-child {
+.services-item:first-child {
     margin-top: 0;
 }
 
-.content__item .item .item__name {
+.services-item__name {
     position: relative;
     color: #000958;
     font-size: 2.1rem;
@@ -447,7 +450,7 @@ h3 {
     padding-left: 12px;
 }
 
-.content__item .item .item__name::before {
+.services-item__name::before {
     position: absolute;
     display: inline-block;
     background: linear-gradient(89.89deg, #ff5b2e 0.39%, #ffa187 100.29%);
@@ -458,14 +461,14 @@ h3 {
     left: 0;
 }
 
-.content__item .item .item__action {
+.services-item__action {
     color: rgba(52, 57, 106, 1);
     font-size: 1.2rem;
     line-height: 1.3;
     text-decoration: none;
 }
 
-.content__item .item .item__action img {
+.services-item__icon{
     margin-left: 4px;
     vertical-align: middle;
     width: 12px;
@@ -474,10 +477,10 @@ h3 {
     transition: scale 0.3s;
 }
 
-.content__item .item .item__action img:hover {
-    scale: 1.2;
+.services-item__icon:hover {
+    scale: 2;
 }
-.content__item .item .item__desc {
+.services-item__desc {
     color: rgba(101, 102, 137, 1);
     font-size: 1.4rem;
     line-height: 2;
@@ -499,8 +502,6 @@ h3 {
     display: inline-block;
     z-index: 1;
     background: linear-gradient(180deg, #9df1fb 0%, #73d0db 108.14%);
-}
-.content__action--more {
 }
 
 /* Team */
