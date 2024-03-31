@@ -77,9 +77,9 @@ function showSlide(mode, index) {
     }
 }
 
-var checkbox = document.querySelector(".checkbox_theme");
+const checkbox_theme = document.querySelector(".checkbox_theme");
 
-checkbox.addEventListener("change", function () {
+checkbox_theme.addEventListener("change", function () {
     if (this.checked) {
         trans();
         document.documentElement.setAttribute("data-theme", "dark");

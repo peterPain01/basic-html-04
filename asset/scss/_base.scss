@@ -52,7 +52,7 @@ h3 {
     margin: 0 auto;
 }
 
-// Change theme toggle
+// Theme 
 
 .checkbox_theme {
     height: 0;
@@ -98,11 +98,11 @@ h3 {
         z-index: 1;
 
         &.sun {
-            left: 4px;
+            left: 5px;
             scale: 1.2;
         }
         &.moon {
-            right: 0;
+            right: 2px;
         }
     }
 }
@@ -131,6 +131,10 @@ html.transition *:after {
     transition: cubic-bezier(0.68, -0.55, 0.27, 01.55) 420ms !important;
     transition-delay: 0 !important;
 }
+
+
+// End theme 
+
 
 /* Common CSS */
 .button {

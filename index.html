@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -88,7 +88,8 @@
             rel="stylesheet"
         />
         <!-- Style CSS  -->
-        <link rel="stylesheet" href="/css/main.css" />
+        <link rel="stylesheet" href="./css/main.css" />
+        <link rel="stylesheet" href="./css/responsive.css" />
         <title>Lucy</title>
     </head>
     <body>
@@ -96,12 +97,24 @@
             <!-- Header -->
             <header class="header">
                 <!-- Navbar -->
-                <div class="navbar">
+                <nav class="navbar">
+                    <label for="menu-checkbox" class="toggle-icon">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 448 512"
+                        >
+                            <path
+                                fill="currentColor"
+                                d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"
+                            />
+                        </svg>
+                    </label>
                     <img
                         class="navbar-logo"
                         src="./asset/img/Logo.svg"
                         alt=""
                     />
+                    <!-- PC nav-->
                     <ul class="navbar__list">
                         <li class="navbar__item navbar__item--active">
                             <a class="navbar__link">Home</a>
@@ -118,14 +131,53 @@
                         <li class="navbar__item">
                             <a class="navbar__link">Contact us</a>
                         </li>
+                        <li class="navbar__item show-on-mobile seperator">
+                            <a class="navbar__link">Sign up</a>
+                        </li>
+                        <li class="navbar__item show-on-mobile">
+                            <a class="navbar__link">Sign in</a>
+                        </li>
                     </ul>
+
                     <button class="navbar__action">Sign up</button>
-                    <input class="checkbox_theme" type="checkbox" id="switch" name="mode">
-                    <label class="label_theme" for="switch">
-                        <img class="sun" src="./asset/img/sun-32.png"/>
-                        <img class="moon" src="./asset/img/moon-32.png"/>
+                    <input
+                        class="checkbox_theme"
+                        type="checkbox"
+                        id="checkbox_theme"
+                        name="mode"
+                    />
+                    <label class="label_theme" for="checkbox_theme">
+                        <img class="sun" src="./asset/img/sun-32.png" />
+                        <img class="moon" src="./asset/img/moon-32.png" />
                     </label>
+                </nav>
+            </header>
+
+            <!-- Tablet and mobile header -->
+            <header class="header-menu">
+                <input
+                    type="checkbox"
+                    name="toggle_drawer"
+                    id="menu-checkbox"
+                    class="menu-checkbox"
+                    hidden
+                />
+                <label for="menu-checkbox" class="overlay-menu"></label>
+                <div class="drawer-menu">
+                    <!-- Logo -->
+                    <a href="#!"> <img src="./asset/img/Logo.svg" alt="" /></a>
+
+                    <!-- List -->
+                    <ul class="drawer-list"></ul>
                 </div>
+                <script>
+                    const pc_list = document.querySelector(".navbar__list");
+                    const mobile_list = document.querySelector(".drawer-list");
+                    mobile_list.innerHTML = pc_list.innerHTML;
+                </script>
+            </header>
+
+            <main>
                 <!-- Hero -->
                 <div class="hero">
                     <!-- Hero Media -->
@@ -181,63 +233,63 @@
                         </div>
                     </div>
                 </div>
-            </header>
-            <!-- About -->
-            <div class="about">
-                <!-- About Content -->
-                <div class="about__content">
-                    <p class="about__hashtag">// About //</p>
-                    <h1 class="about__heading">Best Agency For Your Pet</h1>
-                    <p class="about__description">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing
-                        elit, sed do eiusmod tempor incididunt ut labore et
-                        dolore magna aliqua.
-                    </p>
-                    <ul class="about__criteria">
-                        <li>
-                            <img
-                                class="about__criteria--checkbox"
-                                src="./asset/img/check_box.svg"
-                                alt=""
-                            />Certified Groomer
-                        </li>
-                        <li>
-                            <img
-                                class="about__criteria--checkbox"
-                                src="./asset/img/check_box.svg"
-                                alt=""
-                            />Animal Lover
-                        </li>
-                        <li>
-                            <img
-                                class="about__criteria--checkbox"
-                                src="./asset/img/check_box.svg"
-                                alt=""
-                            />14+ Years Experience
-                        </li>
-                        <li>
-                            <img
-                                class="about__criteria--checkbox"
-                                src="./asset/img/check_box.svg"
-                                alt=""
-                            />Pet Parent Of 3 Dogs
-                        </li>
-                    </ul>
+                <!-- About -->
+                <div class="about">
+                    <!-- About Content -->
+                    <div class="about__content">
+                        <p class="about__hashtag">// About //</p>
+                        <h1 class="about__heading">Best Agency For Your Pet</h1>
+                        <p class="about__description">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing
+                            elit, sed do eiusmod tempor incididunt ut labore et
+                            dolore magna aliqua.
+                        </p>
+                        <ul class="about__criteria">
+                            <li>
+                                <img
+                                    class="about__criteria--checkbox"
+                                    src="./asset/img/check_box.svg"
+                                    alt=""
+                                />Certified Groomer
+                            </li>
+                            <li>
+                                <img
+                                    class="about__criteria--checkbox"
+                                    src="./asset/img/check_box.svg"
+                                    alt=""
+                                />Animal Lover
+                            </li>
+                            <li>
+                                <img
+                                    class="about__criteria--checkbox"
+                                    src="./asset/img/check_box.svg"
+                                    alt=""
+                                />14+ Years Experience
+                            </li>
+                            <li>
+                                <img
+                                    class="about__criteria--checkbox"
+                                    src="./asset/img/check_box.svg"
+                                    alt=""
+                                />Pet Parent Of 3 Dogs
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- About Media -->
+                    <div class="about__media">
+                        <img
+                            class="about__card--main"
+                            src="./asset/img/about.svg"
+                            alt=""
+                        />
+                        <img
+                            class="about__card--sub"
+                            src="./asset//img/about_sub.svg"
+                            alt=""
+                        />
+                    </div>
                 </div>
-                <!-- About Media -->
-                <div class="about__media">
-                    <img
-                        class="about__card--main"
-                        src="./asset/img/about.svg"
-                        alt=""
-                    />
-                    <img
-                        class="about__card--sub"
-                        src="./asset//img/about_sub.svg"
-                        alt=""
-                    />
-                </div>
-            </div>
+            </main>
 
             <!-- Boarding -->
             <div class="boarding">
@@ -346,7 +398,7 @@
                             /></a>
                         </div>
                     </div>
-                    <div class="services-columns">
+                    <div class="services-columns media-column">
                         <img
                             class="content__image"
                             src="./asset/img/services.png"
@@ -818,8 +870,8 @@
                         </div>
                         <div class="links__block">
                             <p class="links__block--title">Opening Time</p>
-                            <p>Mon – Fri : 08.00 am – 20.00 pm</p>
-                            <p>Saturday : 09.00 am – 20.00 pm</p>
+                            <p>Mon – Fri : 08.00–20.00</p>
+                            <p>Saturday : 09.00–20.00</p>
                             <p>Sunday: We are Closed</p>
                         </div>
                     </div>
