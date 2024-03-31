@@ -1,0 +1,179 @@
+html {
+    font-size: 62.5%;
+    --main-color: #fffaf5;
+    --sub-color: #fff6ed;
+    --active-color: #000958;
+    --button-color: #ff5b2e;
+    --text-color: #656689;
+    --text-color--dark: #656689;
+    --hashtag: #5e6085;
+}
+
+html[data-theme="dark"] {
+    --main-color: #222831;
+    --sub-color: #31363f;
+    --active-color: #76abae;
+    --button-color: #76abae;
+    --text-color: #eeeeee;
+    --hashtag: #eeeeee;
+}
+
+:root {
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: Poppins;
+    background-color: var(--main-color);
+}
+img {
+    padding: 0;
+    margin: 0;
+    stroke: transparent;
+    stroke-width: 0px;
+}
+
+button,
+p {
+    font-family: inherit;
+}
+
+h1,
+h2,
+h3 {
+    font-family: "Sora";
+    color: var(--active-color);
+}
+
+.container {
+    width: 1170px;
+    max-width: calc(100% - 48px);
+    margin: 0 auto;
+}
+
+// Change theme toggle
+
+.checkbox_theme {
+    height: 0;
+    width: 0;
+    visibility: hidden;
+}
+
+.label_theme {
+    cursor: pointer;
+    text-indent: -9999px;
+    width: 70px;
+    height: 40px;
+    background: #ffbd07;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    border-radius: 100px;
+    position: relative;
+
+    &::after {
+        content: "";
+        background: white;
+        width: 26px;
+        height: 26px;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        border-radius: 50%;
+        position: absolute;
+        top: 8px;
+        left: 4px;
+        transition: cubic-bezier(0.68, -0.55, 0.27, 01.55) 320ms;
+    }
+
+    & img {
+        width: 24px;
+        height: 24px;
+        top: 8px;
+        position: absolute;
+        object-fit: cover;
+        z-index: 1;
+
+        &.sun {
+            left: 4px;
+            scale: 1.2;
+        }
+        &.moon {
+            right: 0;
+        }
+    }
+}
+
+.checkbox_theme:checked + .label_theme {
+    background: rgb(0, 0, 0);
+    & img.sun {
+        filter: brightness(0) saturate(100%) invert(90%) sepia(17%)
+            saturate(476%) hue-rotate(307deg) brightness(110%) contrast(102%);
+    }
+}
+
+.checkbox_theme:checked + .label_theme:after {
+    left: calc(100% - 0px);
+    -webkit-transform: translateX(-100%);
+    -moz-transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
+    -o-transform: translateX(-100%);
+    transform: translateX(-100%);
+}
+
+html.transition,
+html.transition *,
+html.transition *:before,
+html.transition *:after {
+    transition: cubic-bezier(0.68, -0.55, 0.27, 01.55) 420ms !important;
+    transition-delay: 0 !important;
+}
+
+/* Common CSS */
+.button {
+    color: var(--button-color);
+    border-radius: 31px;
+    border: 1px solid var(--button-color);
+    background-color: transparent;
+    padding: 20px 40px;
+    font-weight: 500;
+    font-size: 1.6rem;
+    align-items: center;
+    cursor: pointer;
+    max-width: 240px;
+    transition: color 0.3s, background-color 0.3s;
+
+    &:hover {
+        background-color: var(--button-color);
+        color: #fff;
+    }
+}
+
+.header_center {
+    font-size: 5.2rem;
+    font-weight: 700;
+    line-height: 2;
+    text-align: center;
+}
+/* End common CSS */
+
+/* Common mixin */
+@mixin flexCenter($direction: row) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: $direction;
+}
+
+@mixin checkedTickChoiceColor() {
+    filter: brightness(0) saturate(100%) invert(59%) sepia(72%) saturate(4553%)
+        hue-rotate(339deg) brightness(98%) contrast(106%);
+}
+
+@mixin uncheckedTickChoiceColor() {
+    filter: brightness(0) saturate(100%) invert(59%) sepia(72%) saturate(4553%)
+        hue-rotate(339deg) brightness(98%) contrast(106%) opacity(0.4);
+}
